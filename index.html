@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Name</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #f6f8fa;
+      color: #24292f;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      background: #24292f;
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .header p {
+      margin-top: 12px;
+      font-size: 18px;
+      color: #8b949e;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header .badges {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .header .badges a {
+      display: inline-block;
+    }
+
+    /* Container */
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      font-weight: 600;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #d0d7de;
+      margin-bottom: 20px;
+      color: #1f2328;
+    }
+
+    .section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #1f2328;
+    }
+
+    .section p,
+    .section li {
+      color: #57606a;
+      font-size: 15px;
+    }
+
+    .section ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .section li {
+      margin-bottom: 6px;
+    }
+
+    /* Code block */
+    .code-block {
+      background: #f0f3f6;
+      border: 1px solid #d0d7de;
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 14px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      color: #24292f;
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    .code-block code {
+      background: none;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    /* Inline code */
+    code {
+      background: #eef1f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      color: #cf222e;
+    }
+
+    /* Button / Link */
+    .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      background: #2da44e;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: #26863e;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #d0d7de;
+      color: #24292f;
+    }
+
+    .btn-outline:hover {
+      background: #f0f3f6;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    /* Feature grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+    }
+
+    .feature-card {
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 10px;
+      padding: 24px;
+      transition: box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .feature-card .icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .feature-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      color: #57606a;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid #d0d7de;
+      color: #8b949e;
+      font-size: 13px;
+      background: #f6f8fa;
+    }
+
+    .footer a {
+      color: #0969da;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 26px;
+      }
+      .header p {
+        font-size: 15px;
+      }
+      .container {
+        padding: 32px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>🚀 Project Name</h1>
+    <p>一句话描述你的项目，简洁明了，让人一眼就知道是做什么的</p>
+    <div class="badges">
+      <a href="https://github.com/aonzey/project">
+        <img src="https://img.shields.io/github/stars/aonzey/project?style=social" alt="GitHub stars" />
+      </a>
+      <a href="https://github.com/aonzey/project/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/aonzey/project" alt="License" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Features -->
+    <div class="section">
+      <h2>✨ 特性</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="icon">⚡</div>
+          <h3>快速轻量</h3>
+          <p>极致性能优化，零冗余依赖，开箱即用。</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🧩</div>
+          <h3>灵活扩展</h3>
+          <p>模块化设计，按需引入，轻松定制。</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📖</div>
+          <h3>文档完善</h3>
+          <p>清晰的使用文档与示例，降低上手成本。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Installation -->
+    <div class="section">
+      <h2>📦 安装</h2>
+      <p>通过 npm 安装：</p>
+      <div class="code-block">
+        <code>npm install your-project</code>
+      </div>
+      <p style="margin-top:16px">或直接从 GitHub 克隆：</p>
+      <div class="code-block">
+        <code>git clone https://github.com/aonzey/project.git</code>
+      </div>
+    </div>
+
+    <!-- Quick Start -->
+    <div class="section">
+      <h2>🚀 快速开始</h2>
+      <p>几行代码即可上手：</p>
+      <div class="code-block">
+<pre><code>import { hello } from "your-project";
+
+hello();</code></pre>
+      </div>
+      <div class="actions">
+        <a href="https://github.com/aonzey/project" class="btn">⭐ Star on GitHub</a>
+        <a href="./docs" class="btn btn-outline">📖 查看文档</a>
+      </div>
+    </div>
+
+    <!-- Usage -->
+    <div class="section">
+      <h2>📘 使用示例</h2>
+
+      <h3>基础用法</h3>
+      <div class="code-block">
+<pre><code>import { add } from "your-project";
+
+console.log(add(1, 2)); // 3</code></pre>
+      </div>
+
+      <h3 style="margin-top:20px">高级配置</h3>
+      <div class="code-block">
+<pre><code>import { init } from "your-project";
+
+init({
+  mode: "production",
+  debug: false,
+});</code></pre>
+      </div>
+    </div>
+
+    <!-- Contributing -->
+    <div class="section">
+      <h2>🤝 贡献</h2>
+      <p>
+        欢迎提交 <a href="https://github.com/aonzey/project/issues">Issue</a> 和
+        <a href="https://github.com/aonzey/project/pulls">Pull Request</a>！
+      </p>
+      <ul>
+        <li>Fork 本项目</li>
+        <li>创建你的特性分支 (<code>git checkout -b feature/xxx</code>)</li>
+        <li>提交修改 (<code>git commit -m "feat: xxx"</code>)</li>
+        <li>推送到分支 (<code>git push origin feature/xxx</code>)</li>
+        <li>提交 Pull Request</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    MIT License · © 2025 Your Name ·
+    <a href="https://github.com/aonzey/project">GitHub</a>
+  </div>
+
+</body>
+</html>
